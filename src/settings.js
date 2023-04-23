@@ -10,7 +10,7 @@ const settings = {
     servicePort: process.env.SERVICE_PORT || 3001,
     dbName: process.env.DB_NAME,
     dbUser: process.env.DB_USER,
-    dbPassword: process.env.PASSWORD,
+    dbPassword: process.env.DB_PASSWORD,
     dbConfig: dbConfig,
 };
 
