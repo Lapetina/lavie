@@ -1,7 +1,7 @@
 require('dotenv').config()
 
 const settings = require('./settings');
-const app = require('./app.js');
+const app = require('./app');
 
 const port = settings.servicePort;
 

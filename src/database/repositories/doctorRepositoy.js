@@ -1,4 +1,4 @@
-import doctorModel from '../models/doctorModel'
+const doctorModel = require('../models/doctorModel');
 
 const doctorRepository = {
     async list(res) {
@@ -11,3 +11,5 @@ const doctorRepository = {
         }
     }
 }
+
+module.exports = doctorRepository;

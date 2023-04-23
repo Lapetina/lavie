@@ -1,4 +1,4 @@
-const doctorRepository = require('../database/repository/doctorRepository');
+const doctorRepository = require('../database/repositories/doctorRepositoy');
 
 const doctor = {
     async list(req, res) {
@@ -10,3 +10,5 @@ const doctor = {
         } 
     }
 }
+
+module.exports = doctor;

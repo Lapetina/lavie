@@ -1,9 +1,8 @@
-const app = require('express')().router();
-require('express-group-routes');
-//const cors = require('cors');
+const express = require('express');
+const app = require('express')();
 const doctorRoutes = require('./routers/doctors');
 
-// doctorRoutes(app);
-app.use(doctorRoutes);
+app.use(express.json());
+doctorRoutes(app);
 
 module.exports = app; 
