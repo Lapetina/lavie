@@ -1,13 +1,15 @@
-// const doctorService = require('../services/doctorService');
-
+const doctorService = require('../services/doctorService');
 
 module.exports = (app) => {
     const api_version = 'v1';
     const namespace = 'doctors';
 
-    app.router.get(`/${api_version}/${namespace}/list`, async(res, res) => {
+    app.get("/", async (response) => {
+        return response.status(200).json({"api_status": "Ok"});
+    });
+    app.get(`/${api_version}/${namespace}/list`, async (request, response) => {
         // ToDo Chamar service
-        return res.json('Funcionando')
+        return response.json('Funcionando')
     });
 };
 
