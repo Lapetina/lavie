@@ -2,10 +2,10 @@
   "name": "backend_lavie",
   "version": "1.0.0",
   "description": "\"Dependencies from project\"",
-  "main": "index.js",
+  "main": "src/httpServer.js",
   "scripts": {
     "start": "node src/httpServer.js",
-    "test": "echo 'Running tests..."
+    "test": "nodemon src/httpServer.js"
   },
   "repository": {
     "type": "git",
@@ -25,6 +25,7 @@
     "bcryptjs": "^2.4.3",
     "express": "^4.18.2",
     "jsonwebtoken": "^9.0.0",
+    "mariadb": "^3.1.1",
     "mysql": "^2.18.1",
     "mysql2": "^3.2.3",
     "sequelize": "^6.31.0",
