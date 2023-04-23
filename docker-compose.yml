@@ -1,0 +1,36 @@
+version: '3.9'
+
+services:
+  # Database - MySQL local
+  
+#   lavie_db:
+#     container_name: "lavie-mysql"
+#     image: mysql:5.7
+#     environment:
+#       MYSQL_ROOT_PASSWORD: root
+#       MYSQL_DATABASE: lavie_db
+#       MYSQL_USER: root
+#       MYSQL_PASSWORD: root
+#     volumes:
+#       - lavie_db:/var/lib/mysql
+#     ports:
+#       - "127.0.0.1:7105:3306"
+
+# volumes:
+#   lavie_db:
+
+  lavie_db:
+    container_name: "lavie_db"
+    image: mariadb:10.7.8-focal
+    environment:
+      - MARIADB_DATABASE_V2=laviemain
+      - MARIADB_USER=root
+      - MARIADB_ROOT_PASSWORD=root
+    volumes:
+      - lavie_db:/var/lib/mariadb/data
+    ports:
+      - "127.0.0.1:7105:3306"
+
+
+volumes:
+  lavie_db:
